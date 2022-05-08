@@ -82,3 +82,36 @@ router.post('/', (req, res) => {
     });
 });
 
+//when user clicks login button, find their registered username
+//POST route to login page 
+//if there the username is not found with that data, or incorrect the response status 400 will display 
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            username: req.body.username
+        }
+    }).then(dbUserData => {
+        if (!dbUserData) {
+            res.status(400).json ({ message: 'No user with that username. '}); 
+            return;
+        }
+        const validPassword = dbUserData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password.'});
+            return; 
+        }
+        req.session.save(() => {
+
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+
+            res.json({ user: dbUserData, message: 'Login Successful. Welcome back!'});
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
