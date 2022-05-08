@@ -115,3 +115,16 @@ router.post('/login', (req, res) => {
         res.status(500).json(err);
     });
 });
+// when user logout, frontend script prompted to destroy/kill sessions
+//POST route to logout page
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
+});
+
+module.exports = router; 
