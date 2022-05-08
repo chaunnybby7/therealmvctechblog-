@@ -7,7 +7,7 @@ const homeRoutes = require('./home-routes.js');
 //imports dashbboard-route
 const dashboardRoutes = require('./dashboard-routes.js');
 
-//directs route variable based on what comes from front-end user 
+//directs route variable based on what comes from user 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 router.use('/dashboard', dashboardRoutes);
