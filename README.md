@@ -1,7 +1,9 @@
 # The Real MVC Tech Blog 
+## Description 
 
-# Model View Controller Practice
-
+>*A project to build a CMS-style blog site and practice MVC(Model View Controller) as well as learn how to use the Handlebars.js.*
+[View Deployed Version Here](https://gentle-fjord-03411.herokuapp.com/)
+## MVC
   
 <p>
     <img src="https://img.shields.io/badge/express-orange" />
@@ -10,11 +12,10 @@
     <img src="https://img.shields.io/badge/dotenv-green" />
     <img src="https://img.shields.io/badge/-Heroku-purple" />
 </p>
-## Description 
 
->*A project to practice separation of concerns (Model View Controller - MVC) as well as learn how to use the Handlebars.js templating engine.*
-[View Deployed Version Here](https://gentle-fjord-03411.herokuapp.com/)
+
 -----------
+## Demo
 ![Screenshot Demo](images/)
 
 -----------
@@ -113,10 +114,6 @@ I am not looking for contributors, but please let me know if you want to help.
 -----------
 
 ## Questions 
-GitHub: https://github.com/Pythonidaer
+GitHub: https://github.com/chaunnybby7
 
-For additional information, please reach out to codefolio.work@gmail.com
-
-<a href="https://twitter.com/jonamichahammo">
-    <img alt="Twitter: jonamichahammo" src="https://img.shields.io/twitter/follow/jonamichahammo.svg?style=social" target="_blank" />
-</a> 
+For additional information, please reach out to yong@nyit.edu
